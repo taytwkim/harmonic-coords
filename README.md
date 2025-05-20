@@ -1,5 +1,7 @@
 # Harmonic Coordinates
 
+![demo](img/demo.png)
+
 A simple 2D demonstration of [Harmonic Coordinates for Character Articulation](https://graphics.pixar.com/library/HarmonicCoordinatesB/paper.pdf).
 
 Repo set up instructions are provided below.
@@ -12,8 +14,11 @@ To achieve this, we assign a set of weights to each interior point `p` relative 
 
 After computing the weights once, we can deform the cage and compute the new position `p'` as: `p' = ∑​ wi​(p) * c'​i`.
 
+![cage-based-deformation](img/cage-based-deformation.png)
 
 In this project, we use **harmonic coordinates** — a type of weight function computed by minimizing the **Dirichlet energy** subject to boundary conditions. This leads to solving the Laplace equation, ensuring that the weights vary smoothly and produce natural-looking deformations.
+
+![harmonic-weights](img/harmonic-weights.png)
 
 Harmonic weights are especially useful for complex or non-convex cages, offering smooth and stable results.
 
